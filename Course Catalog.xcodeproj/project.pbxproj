@@ -15,6 +15,9 @@
 		9A3BB6E426532263002B3AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BB6E226532263002B3AFB /* LaunchScreen.storyboard */; };
 		9A3BB6EF26532263002B3AFB /* Course_CatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BB6EE26532263002B3AFB /* Course_CatalogTests.swift */; };
 		9A3BB6FA26532263002B3AFB /* Course_CatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BB6F926532263002B3AFB /* Course_CatalogUITests.swift */; };
+		9A3BB708265322CC002B3AFB /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BB707265322CC002B3AFB /* Jenkinsfile */; };
+		9A3BB70A265322D9002B3AFB /* Course CatalogUITestsCS3260.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3BB709265322D9002B3AFB /* Course CatalogUITestsCS3260.swift */; };
+		9A3BB70C265322FD002B3AFB /* CSCourses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A3BB70B265322FD002B3AFB /* CSCourses.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9A3BB6F526532263002B3AFB /* Course CatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course CatalogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3BB6F926532263002B3AFB /* Course_CatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_CatalogUITests.swift; sourceTree = "<group>"; };
 		9A3BB6FB26532263002B3AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A3BB707265322CC002B3AFB /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
+		9A3BB709265322D9002B3AFB /* Course CatalogUITestsCS3260.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course CatalogUITestsCS3260.swift"; sourceTree = "<group>"; };
+		9A3BB70B265322FD002B3AFB /* CSCourses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CSCourses.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		9A3BB6CB26532262002B3AFB = {
 			isa = PBXGroup;
 			children = (
+				9A3BB707265322CC002B3AFB /* Jenkinsfile */,
 				9A3BB6D626532262002B3AFB /* Course Catalog */,
 				9A3BB6ED26532263002B3AFB /* Course CatalogTests */,
 				9A3BB6F826532263002B3AFB /* Course CatalogUITests */,
@@ -99,6 +106,7 @@
 		9A3BB6D626532262002B3AFB /* Course Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				9A3BB70B265322FD002B3AFB /* CSCourses.plist */,
 				9A3BB6D726532262002B3AFB /* AppDelegate.swift */,
 				9A3BB6D926532262002B3AFB /* SceneDelegate.swift */,
 				9A3BB6DB26532262002B3AFB /* ViewController.swift */,
@@ -122,6 +130,7 @@
 		9A3BB6F826532263002B3AFB /* Course CatalogUITests */ = {
 			isa = PBXGroup;
 			children = (
+				9A3BB709265322D9002B3AFB /* Course CatalogUITestsCS3260.swift */,
 				9A3BB6F926532263002B3AFB /* Course_CatalogUITests.swift */,
 				9A3BB6FB26532263002B3AFB /* Info.plist */,
 			);
@@ -232,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3BB6E426532263002B3AFB /* LaunchScreen.storyboard in Resources */,
+				9A3BB70C265322FD002B3AFB /* CSCourses.plist in Resources */,
+				9A3BB708265322CC002B3AFB /* Jenkinsfile in Resources */,
 				9A3BB6E126532263002B3AFB /* Assets.xcassets in Resources */,
 				9A3BB6DF26532262002B3AFB /* Main.storyboard in Resources */,
 			);
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3BB70A265322D9002B3AFB /* Course CatalogUITestsCS3260.swift in Sources */,
 				9A3BB6FA26532263002B3AFB /* Course_CatalogUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NPYQUSVT5P;
 				INFOPLIST_FILE = "Course Catalog/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,7 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NPYQUSVT5P;
 				INFOPLIST_FILE = "Course Catalog/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

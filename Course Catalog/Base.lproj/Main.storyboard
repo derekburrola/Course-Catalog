@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,7 +36,7 @@
                                 </connections>
                             </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wuw-6m-YLM" userLabel="courses">
-                                <rect key="frame" x="20" y="20" width="374" height="667"/>
+                                <rect key="frame" x="20" y="20" width="374" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="2sh-Mw-7KT" detailTextLabel="Jc0-bm-QPu" style="IBUITableViewCellStyleSubtitle" id="jQz-bD-Rc8" userLabel="cell">
@@ -74,15 +73,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gLw-fY-DXh" secondAttribute="trailing" constant="148" id="2tb-YF-3xC"/>
-                            <constraint firstItem="wuw-6m-YLM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Gil-3M-euT"/>
                             <constraint firstItem="gLw-fY-DXh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="HU0-MY-s9Y"/>
-                            <constraint firstItem="5jY-eT-Xlm" firstAttribute="top" secondItem="wuw-6m-YLM" secondAttribute="bottom" constant="8" symbolic="YES" id="KOX-au-yXP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qwA-a6-WlX" secondAttribute="bottom" constant="20" id="OWi-Is-R0K"/>
-                            <constraint firstItem="wuw-6m-YLM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f7B-FM-Fgu"/>
+                            <constraint firstItem="wuw-6m-YLM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="Wef-Wq-ROb"/>
+                            <constraint firstItem="qwA-a6-WlX" firstAttribute="top" secondItem="wuw-6m-YLM" secondAttribute="bottom" constant="8" symbolic="YES" id="Y7Q-fb-sun"/>
+                            <constraint firstItem="wuw-6m-YLM" firstAttribute="leading" secondItem="5jY-eT-Xlm" secondAttribute="leading" id="YoC-fo-ZGE"/>
                             <constraint firstItem="5jY-eT-Xlm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l3X-ur-6h4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wuw-6m-YLM" secondAttribute="trailing" constant="20" id="pXB-Wk-REA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5jY-eT-Xlm" secondAttribute="bottom" constant="20" id="uEI-7R-zqp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qwA-a6-WlX" secondAttribute="trailing" constant="20" id="y1w-m1-XsY"/>
+                            <constraint firstItem="wuw-6m-YLM" firstAttribute="trailing" secondItem="qwA-a6-WlX" secondAttribute="trailing" id="ygU-Gv-7hv"/>
                             <constraint firstItem="gLw-fY-DXh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zss-qU-G5A"/>
                         </constraints>
                     </view>

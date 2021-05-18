@@ -15,39 +15,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	var courses: [String : [String : String]]!
 	var courseKeys = Array<String>()
 	var selectedCourses = Array<String>()
-	var checkedCourses = [String: Int]()
+	var showOnlyChecked = false
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return courses.count
+		// Set size based on switch
+		return showOnlyChecked ? selectedCourses.count : courses.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier:"cell",for: indexPath)
-		
-		let key = courseKeys[indexPath[1]]
+		let index = indexPath[1]
+		// set key from either full list or only selected list
+		let key = showOnlyChecked ? selectedCourses[index] : courseKeys[index]
 		let dictionaryItem = courses[key]
 		let desc = dictionaryItem?["ShortDescription"]
-		
+		// set labels
 		cell.textLabel?.text = "\(key)"
 		cell.detailTextLabel?.text = "\(desc ?? " ")"
-		if(selectedCourses.contains(key)){
-			cell.accessoryType = .checkmark
-		} else{
-			cell.accessoryType = .none
-		}
-		
+		cell.accessoryType = selectedCourses.contains(key) ? .checkmark : .none
+
 		return cell
 	}
 	
-	//clicking on cell
+	// Table Cell clicked
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let cell = tableView.cellForRow(at: indexPath)
-		
 		let key = "\(cell?.textLabel?.text ?? "")"
-		
+	
 		if(cell?.accessoryType == .checkmark){
 			// remove from list
+			// TODO: use a foreach loop instead to make it nicer
 			var i = 0
 			while i < selectedCourses.count
 			{
@@ -60,8 +58,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		} else {
 			// add to list
 			selectedCourses.append(key)
+			selectedCourses.sort()
 		}
-		//tableView.deselectRow(at:indexPath, animated:true)
 		self.tableView.reloadData()
 	}
 	
@@ -69,8 +67,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		courses = loadCSCourses()
+		
 		courseKeys = Array(courses.keys)
 		courseKeys.sort()
+		
 		self.tableView.delegate = self
 	}
 
@@ -95,11 +95,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	
 	
 	@IBAction func switch_flipped(_ sender: Any) {
-		if(mySwitch.isOn){
-			// Show only items that are checked
-		} else{
-			// show all items
-		}
+		showOnlyChecked = mySwitch.isOn
+		self.tableView.reloadData()
 	}
 	
 }
